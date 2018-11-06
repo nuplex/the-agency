@@ -1,0 +1,36 @@
+{
+  "name": "the-agency",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest --watch",
+    "run": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuplex/the-agency.git"
+  },
+  "author": "Chijioke",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/nuplex/the-agency/issues"
+  },
+  "homepage": "https://github.com/nuplex/the-agency#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7",
+    "url-parse": "^1.4.4"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "jest": "^23.6.0"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": ["transform-es2015-modules-commonjs"]
+      }
+    }
+  }
+}
