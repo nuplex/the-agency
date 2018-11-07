@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: sans-serif;
+    font-size: 14pt;
+    color: #333;
+}
+
+button {
+    background: #3253a6;
+    border: none;
+    font-size: 14pt;
+    color: white;
+    padding: 8px 12px;
+    margin-left: 8px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+button:hover {
+    background: #223873;
+}
+
+#app {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3em;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.custom-input,
+.custom-input--num {
+    margin-left: 4px;
+    margin-right: 4px;
+    border: none;
+    border-bottom: 1px #b3b3b3 solid;
+    font-family: sans-serif;
+    font-size: 14pt;
+    color: #666666;
+    width: 60px;
+}
+
+.custom-input--num {
+    width: 100px;
+}
+
+.custom-input:hover{
+    border-bottom: 1px #808080 solid;
+}
+
+.error {
+    color: #8c2a2c;
+}
+
+.loading {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background: #223873;
+    animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.error-cont,
+.loading-cont,
+.sale-results {
+    margin: 24px 0 0 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.sale-text-cont {
+    margin: 0 0 8px 0;
+    text-align: center;
+}
+
+.special--amt,
+.special--sale,
+.special--hierarchy,
+.special--plan {
+    font-weight: bold;
+}
+
+.special--amt {
+    color: #25592e;
+}
+
+.special--hierarchy {
+    color: #8c2a2c;
+}
+
+.special--plan {
+    color: #223873;
+}
+
+.special--results {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 18pt;
+    color: #3253a6;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to {transform: rotate(360deg); }
+}
+

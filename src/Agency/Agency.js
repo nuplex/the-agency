@@ -10,15 +10,30 @@ const Agency = {
     agents: {},
     plans: {},
     hierarchies: {},
+    /**
+     * Adds an agent to the Agency.
+     * Note: adding an agent that already exists will overwrite their commissionPercent
+     * @param name - the name of the agent
+     * @param commissionPercent - the % commission this agent gets
+     */
     addAgent(name, commissionPercent){
         this.agents[name] = createAgent(name, commissionPercent);
     },
+    /**
+     * Adds a new Plan to the Agency.
+     * Note: adding a plan that already exists will overwrite the old plan
+     * @param name - the name of the plan
+     * @param percents - an array of percents representing the order of commission % (from selling -> supers)
+     */
     addPlan(name, percents){
         this.plans[name] =  createCommissionPlan(name, percents);
     },
     /**
-     * Adds a new Hierarchy. If the not all agents defined in the hierarchy are in the Agency, this will throw an error.
-     * @param name - The name of this hierarchy
+     * Adds a new Hierarchy to the Agency.
+     * If the not all agents defined in the hierarchy are in the Agency, this will throw an error.
+     *
+     * Note: adding a hierarchy that already exists will overwrite the old hierarchy
+     * @param name - the name of this hierarchy
      * @param agentsInOrder - Agent Names, where the first is the selling agent, and successive agents being supers.
      */
     addHierarchy(name, agentsInOrder){
@@ -69,7 +84,7 @@ const Agency = {
                 commissions.saleStrings.push(
                     `${i === 0 ? 'Selling Agent':`Super Agent ${i}`} (${agent.name}) gets `+
                     `${percent * 100}% of the agent commission % of policy amount = `+
-                    `${percent * 100}% * ${agent.commissionPercent * 100}% * ${amt} = ${commission}`
+                    `${parseFloat((percent * 100).toFixed(2))}% * ${parseFloat((agent.commissionPercent * 100).toFixed(2))}% * ${amt} = ${commission}`
                 );
 
                 i++;
@@ -84,7 +99,7 @@ const Agency = {
 
 /**
  * Creates an Agency.
- * @param name
+ * @param name - name of the Agency
  * @return {Agency}
  */
 function createAgency(name){
