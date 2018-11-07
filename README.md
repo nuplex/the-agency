@@ -4,9 +4,10 @@ javascript with a Node.js/Express backend.
 
 ## Get Started
 1. Ensure you have the latest version of Node.js and npm installed.
-2. Clone this repo
-3. In the root directory, do `npm run start`
-4. The application is now running at `localhost:8080`!
+2. Clone this repo.
+3. In the root directory, do `npm install`.
+4. In the root directory, do `npm run start`.
+5. The application is now running at `localhost:8080`!
 
 ## Testing
 To run the unit tests, do `npm run test`
